@@ -8,4 +8,11 @@ for i in range(N):
     
 # 함수에서 괄호()의 여부는 함수를 실행하냐, 속성만 가져오냐의 차이. 
 # line 5의 .columns 는 정수형 객체임 -> 괄호 붙여서 '호출'하면 오류남. 
-# 얘 왜 백준에서 오류남? 
+# 얘 왜 백준에서 오류남? - 몰라. 근데 애초에 출력 형식이 달랐음. 
+
+# 정답 
+import sys 
+
+N = int(sys.stdin.readline()) 
+for i in range(N): 
+    print(' '*(N-i-1)+'*'*(i+1)) 
