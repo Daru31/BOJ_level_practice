@@ -4,7 +4,7 @@ from collections import Counter
 a = sys.stdin.readline().strip().lower()  # 입력받고 소문자로 변환
 counter = Counter(a)  # 각 문자의 개수를 한 번에 계산 (O(N))
 
-max_count = max(counter.values())  # 최빈빈 문자 개수 (O(N))
+max_count = max(counter.values())  # 최빈 문자 개수 (O(N))
 max_chars = [ch for ch, cnt in counter.items() if cnt == max_count]  # 최빈 문자 찾기 (O(N))
 
 print('?') if len(max_chars) > 1 else print(max_chars[0].upper())  # 최빈 문자가 1개면 그것의 대문자 출력, 아니면 '?' 출력 
